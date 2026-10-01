@@ -1,0 +1,1082 @@
+<div class="portfolio">
+
+  <header class="navbar">
+    <div class="navbar-inner">
+
+    <a href="#home" class="brand" (click)="menuOpen.set(false)">
+      <span class="brand-mark">N</span>
+      <span class="brand-name">Nouha Essid</span>
+    </a>
+
+    <nav class="nav-links" aria-label="Main navigation">
+      <a href="#about">About</a>
+      <a href="#projects">Projects</a>
+      <a href="#experience">Experience</a>
+      <a href="#education">Education</a>
+      <a href="#skills">Skills</a>
+      <a href="#certifications">Certifications</a>
+    </nav>
+
+    <a href="#contact" class="contact-pill">
+      <span>Get in touch</span>
+      <span class="arrow">↗</span>
+    </a>
+
+    <button
+      class="menu-button"
+      type="button"
+      [attr.aria-label]="menuOpen() ? 'Close menu' : 'Open menu'"
+      [attr.aria-expanded]="menuOpen()"
+      aria-controls="mobile-nav"
+      (click)="menuOpen.set(!menuOpen())"
+    >
+      {{ menuOpen() ? '✕' : '☰' }}
+    </button>
+
+    </div>
+  
+    @if (menuOpen()) {
+      <nav id="mobile-nav" class="mobile-nav" aria-label="Mobile navigation">
+        <a href="#about" (click)="menuOpen.set(false)">About</a>
+        <a href="#projects" (click)="menuOpen.set(false)">Projects</a>
+        <a href="#experience" (click)="menuOpen.set(false)">Experience</a>
+        <a href="#education" (click)="menuOpen.set(false)">Education</a>
+        <a href="#skills" (click)="menuOpen.set(false)">Skills</a>
+        <a href="#certifications" (click)="menuOpen.set(false)">Certifications</a>
+        <a href="#contact" class="mobile-contact" (click)="menuOpen.set(false)">Get in touch</a>
+      </nav>
+    }
+  </header>
+
+
+  <main id="home">
+
+    <!-- HERO -->
+    <section class="hero">
+
+      <div class="hero-content">
+
+        <p class="eyebrow">Nouha Essid · Tunisia</p>
+
+        <h1>
+          Full-Stack Engineer
+          <span>Angular & Spring Boot.</span>
+        </h1>
+
+        <p class="hero-description">
+          I build full-stack web applications with Angular, TypeScript, Java
+          and Spring Boot, with experience in REST APIs, authentication and
+          modern backend architecture.
+        </p>
+
+        <div class="hero-actions">
+          <a href="#projects" class="primary-button">
+            See my projects
+            <span>→</span>
+          </a>
+        
+          <a
+            href="/Resume.pdf"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="secondary-button"
+          >
+            View CV
+          </a>
+        </div>
+
+        <div class="social-links">
+        
+          <a
+            href="https://github.com/nouhaessid"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="GitHub profile"
+          >
+            GitHub ↗
+          </a>
+      
+          <a
+            href="https://www.linkedin.com/in/nouhaessid/"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="LinkedIn profile"
+          >
+            LinkedIn ↗
+          </a>
+      
+        </div>
+
+
+      </div>
+
+      <!-- PROFILE IMAGE -->
+
+      <div class="hero-visual">
+    
+    <div class="hero-photo-wrapper">
+
+      <div class="photo-background"></div>
+
+      <img
+        src="/fig1.jpg"
+        alt="Portrait of Nouha Essid"
+        class="hero-photo"
+      />
+
+    </div>
+
+      </div>
+
+    </section>
+
+    <!-- ABOUT -->
+    <section id="about" class="section about-section">
+
+      <div class="section-heading">
+
+    <p class="section-label">About</p>
+
+    <h2>
+      Building software
+      <span>across the stack.</span>
+    </h2>
+
+      </div>
+
+      <div class="about-grid">
+
+    <div class="about-text">
+
+      <p>
+        I'm a full-stack software engineer with experience across the API 
+        and database layers up to the user interface. I work with authentication,
+        authorization, application architecture, data management, and service 
+        integration. My projects have given me hands-on experience designing 
+        backend services, connecting frontend applications to APIs, and building 
+        secure, maintainable systems.
+      </p>
+
+      <p>
+        I'm looking for a software engineering role where I can contribute
+        to real products, work with experienced teams, and continue
+        growing as a full-stack engineer.
+      </p>
+
+    </div>
+
+
+    <div class="about-code">
+
+      <div class="code-window">
+
+        <div class="window-header">
+
+          <div class="window-dots">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+
+          <span>nouha.ts</span>
+
+        </div>
+
+        <div class="code-content">
+
+          <div>
+            <span class="purple">const</span>
+            <span class="blue"> nouha</span> =
+            <span class="yellow">&#123;</span>
+          </div>
+
+          <div class="indent">
+            role:
+            <span class="green">'Full-Stack Engineer'</span>,
+          </div>
+
+          <div class="indent">
+            frontend:
+            <span class="green">'Angular'</span>,
+          </div>
+
+          <div class="indent">
+            backend:
+            <span class="green">'Spring Boot'</span>,
+          </div>
+
+          <div class="indent">
+            architecture:
+            <span class="green">'Microservices'</span>,
+          </div>
+
+          <div class="indent">
+            security:
+            <span class="green">'Keycloak'</span>
+          </div>
+
+          <div>
+            <span class="yellow">&#125;</span>
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+    
+      </div>
+
+    </section>
+
+    <!-- PROJECTS -->
+    <section id="projects" class="section projects-section">
+
+      <div class="section-heading projects-heading">
+
+        <div>
+
+          <p class="section-label">Projects</p>
+
+          <h2>
+            Full-stack platforms,
+            <span>built end to end.</span>
+          </h2>
+
+        </div>
+
+      </div>
+
+
+      <!-- FEATURED PROJECT 1: ELECTROHUB -->
+      <article class="featured-project">
+
+        <div class="project-preview">
+
+          <div class="preview-window">
+
+            <div class="preview-topbar">
+              <span></span>
+              <span></span>
+              <span></span>
+              <small>electrohub</small>
+            </div>
+
+            <div class="preview-image">
+
+              <img
+                src="/ecommerce_home.jpeg"
+                alt="ElectroHub storefront showing the product catalog"
+              />
+
+            </div>
+
+          </div>
+
+        </div>
+
+        <div class="featured-copy">
+
+          <div class="project-label">
+            Featured project · E-commerce
+          </div>
+      
+          <h3>ElectroHub</h3>
+      
+          <p>
+            A full-stack e-commerce platform with product browsing, shopping cart,
+            wishlist, checkout, and admin management. Built with Angular and Spring
+            Boot microservices, with Keycloak authentication, Kafka-based event 
+            communication, and a database-per-service architecture.
+          </p>
+
+          <div class="project-stack">
+              <span>Angular 21</span>
+              <span>NgRx Signal Store</span>
+              <span>Spring Boot</span>
+              <span>API Gateway</span>
+              <span>Config Server</span>
+              <span>Eureka</span>
+              <span>OpenFeign</span>
+              <span>Keycloak</span>
+              <span>Kafka</span>
+              <span>PostgreSQL</span>
+              <span>MongoDB</span>
+              <span>Docker</span>
+            </div>
+
+          <div class="project-links">
+        
+            <a
+              href="https://github.com/nouhaessid/electrohub-backend"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="project-link"
+            >
+              Backend repo
+              <span>↗</span>
+            </a>
+        
+            <a
+              href="https://github.com/nouhaessid/electrohub-frontend"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="project-link"
+            >
+              Frontend repo
+              <span>↗</span>
+            </a>
+        
+            <a
+              href="https://www.youtube.com/watch?v=L8GodrK8Dms"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="project-link"
+            >
+              Watch demo
+              <span>↗</span>
+            </a>
+        
+          </div>
+      
+        </div>
+
+      </article>
+
+      <!-- FEATURED PROJECT 2: PREPMATE -->
+      <article class="featured-project">
+      
+        <div class="project-preview">
+        
+          <div class="preview-window">
+          
+            <div class="preview-topbar">
+              <span></span>
+              <span></span>
+              <span></span>
+              <small>prepmate</small>
+            </div>
+          
+            <div class="preview-image">
+              <img
+                src="/interviewExample.png"
+                alt="PrepMate interview preparation"
+              />
+            </div>
+          
+          </div>
+        </div>
+      
+        <div class="featured-copy">
+        
+          <div class="project-label">
+            Featured project · AI Interview Platform
+          </div>
+        
+          <h3>PrepMate</h3>
+        
+          <p>
+            An AI-powered technical interview platform where users configure 
+            interviews, answer questions one at a time, and receive AI-based 
+            evaluation with scores, feedback, strengths, weaknesses, and suggested
+            answers. Built with Angular and Spring Boot microservices, secured with
+            Keycloak, with evaluation powered by Grok.
+          </p>
+          
+          <div class="project-stack">
+            <span>Angular 22</span>
+            <span>Angular Signals</span>
+            <span>Spring Boot</span>
+            <span>API Gateway</span>
+            <span>Config Server</span>
+            <span>Eureka</span>
+            <span>OpenFeign</span>
+            <span>Keycloak</span>
+            <span>PostgreSQL</span>
+            <span>Docker</span>
+            <span>Tailwind CSS</span>
+            <span>Angular Material</span>
+          </div>
+        
+          <div class="project-links">
+          
+            <a
+              href="https://github.com/nouhaessid/prepmate-backend/"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="project-link"
+            >
+              Backend repo
+              <span>↗</span>
+            </a>
+          
+            <a
+              href="https://github.com/nouhaessid/prepmate-frontend/"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="project-link"
+            >
+              Frontend repo
+              <span>↗</span>
+            </a>
+          
+            <a
+              href="https://youtu.be/mXFyvs1KSNA"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="project-link"
+            >
+              Watch demo
+              <span>↗</span>
+            </a>
+          
+          </div>
+        
+        </div>
+      
+      </article>
+
+
+      <!-- ADDITIONAL PROJECT -->
+      <div class="section-heading centered ml-heading">
+        <p class="section-label ml-heading">Also built · Machine learning</p>
+      </div>
+
+      <div class="project-grid single">
+      
+        <!-- FACIAL VERIFICATION -->
+        <article class="project-card">
+        
+          <div class="project-top">
+            <div class="project-icon">CV</div>
+          </div>
+        
+          <div class="project-type">Computer vision</div>
+        
+          <a
+            href="https://github.com/nouhaessid/Facial-Verification"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="project-title-link"
+          >
+            <h3>Facial Verification</h3>
+          </a>
+        
+          <p>
+            Siamese network that verifies whether two face images show the
+            same person, with real-time webcam verification. Trained on
+            webcam-captured pairs and the LFW dataset.
+          </p>
+        
+          <div class="project-tags">
+            <span>TensorFlow</span>
+            <span>Keras</span>
+            <span>OpenCV</span>
+            <span>Siamese Network</span>
+            <span>CNN</span>
+          </div>
+        
+        </article>
+      
+      </div>
+
+      <div class="all-projects">
+        <a
+          href="https://github.com/nouhaessid"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="outline-button"
+        >
+          More on GitHub
+          <span>↗</span>
+        </a>
+      </div>
+
+    </section>
+
+    <!-- EXPERIENCE -->
+    <section id="experience" class="section exp-section">
+    
+      <div class="section-heading">
+      
+        <p class="section-label">Experience</p>
+      
+        <h2>
+          Experience that
+          <span>shaped how I build.</span>
+        </h2>
+      
+      </div>
+    
+      <div class="exp-list">
+      
+        <!-- MITACS -->
+        <article class="exp-item exp-item--purple exp-item--featured">
+        
+          <div class="exp-number">2024</div>
+        
+          <div class="exp-main">
+          
+            <div class="exp-meta">
+              <span class="exp-company">
+                Ontario Tech University · Oshawa, Canada
+              </span>
+            
+              <span class="exp-period">
+                Jun – Dec 2024
+              </span>
+            </div>
+          
+            <h3>Mitacs Globalink Intern</h3>
+          
+            <p>
+              Worked on navigation and optimization problems using
+              deep reinforcement learning. Developed and evaluated
+              DQN and TD3 models with TensorFlow and OpenAI Gym,
+              comparing their results with classical navigation
+              approaches (A* and Artificial Potential Field).
+            </p>
+          
+            <div class="exp-stack">
+              <span>TensorFlow</span>
+              <span>OpenAI Gym</span>
+              <span>DQN</span>
+              <span>TD3</span>
+            </div>
+          
+            <a
+              href="https://github.com/nouhaessid/Path-Planning-DRL"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="exp-link"
+            >
+              <span>GitHub repository</span>
+              <span>↗</span>
+            </a>
+          
+          </div>
+        
+          <div class="exp-badge">
+            <span>DRL</span>
+          </div>
+        
+        </article>
+      
+        <!-- NEXTAV -->
+        <article class="exp-item exp-item--blue">
+        
+          <div class="exp-number">2023</div>
+        
+          <div class="exp-main">
+          
+            <div class="exp-meta">
+              <span class="exp-company">
+                NextAV · Sousse, Tunisia
+              </span>
+            
+              <span class="exp-period">
+                Jan – Aug 2023
+              </span>
+            </div>
+          
+            <h3>Machine Learning Apprentice</h3>
+          
+            <p>
+              Built a Random Forest classifier in Python to classify crop types
+              from Sentinel-2 satellite imagery and vegetation indices. Prepared
+              the dataset and evaluated model performance with k-fold
+              cross-validation.
+            </p>
+          
+            <div class="exp-stack">
+              <span>Python</span>
+              <span>Scikit-learn</span>
+              <span>Random Forest</span>
+              <span>Sentinel-2</span>
+            </div>
+          
+            <a
+              href="https://github.com/nouhaessid/Crops-Classification-using-Sentinel-2"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="exp-link"
+            >
+              <span>GitHub repository</span>
+              <span>↗</span>
+            </a>
+          
+          </div>
+        
+          <div class="exp-badge">
+            <span>ML</span>
+          </div>
+        
+        </article>
+      
+      </div>
+    
+    </section>
+
+    <!-- EDUCATION -->
+    <section id="education" class="section edu-section">
+    
+      <div class="section-heading">
+      
+        <p class="section-label">Education</p>
+      
+        <h2>
+          Academic background
+          <span>and foundations.</span>
+        </h2>
+      
+      </div>
+    
+      <div class="edu-list">
+      
+        <!-- ENGINEERING DEGREE -->
+        <article class="edu-item edu-item--purple">
+        
+          <div class="edu-number">2024</div>
+        
+          <div class="edu-main">
+          
+            <div class="edu-meta">
+              <span class="edu-school">
+                National Engineering School of Sousse (ENISo) · Sousse, Tunisia
+              </span>
+            
+              <span class="edu-period">
+                Sep 2021 – Dec 2024
+              </span>
+            </div>
+          
+            <h3>Engineering Degree in Computer Science</h3>
+          
+          </div>
+        
+          <div class="edu-badge">
+            <span>CS</span>
+          </div>
+        
+        </article>
+      
+        <!-- PRE-ENGINEERING STUDIES -->
+        <article class="edu-item edu-item--blue">
+        
+          <div class="edu-number">2021</div>
+        
+          <div class="edu-main">
+          
+            <div class="edu-meta">
+              <span class="edu-school">
+                Monastir Preparatory Engineering Institute (IPEIM) · Monastir, Tunisia
+              </span>
+            
+              <span class="edu-period">
+                Sep 2019 – Jun 2021
+              </span>
+            </div>
+          
+            <h3>Pre-Engineering Program – Mathematics & Physics (MP Track)</h3>
+          
+          </div>
+        
+          <div class="edu-badge">
+            <span>MP</span>
+          </div>
+        
+        </article>
+      
+      </div>
+    
+    </section>
+
+    <!-- SKILLS -->
+    <section id="skills" class="section skills-section">
+    
+      <div class="section-heading">
+      
+        <p class="section-label">Skills</p>
+      
+        <h2>
+          Technologies I
+          <span>build with.</span>
+        </h2>
+      
+      </div>
+    
+      <div class="skills-categories">
+      
+      
+        <!-- FRONTEND -->
+        <div class="skill-category">
+        
+          <h3>Frontend</h3>
+        
+          <div class="skill-list">
+            <span>Angular</span>
+            <span>TypeScript</span>
+            <span>Angular Signals</span>
+            <span>NgRx Signal Store</span>
+            <span>RxJS</span>
+            <span>Angular SSR</span>
+            <span>Angular Material</span>
+            <span>Tailwind CSS</span>
+          </div>
+        
+        </div>
+      
+      
+        <!-- BACKEND -->
+        <div class="skill-category">
+        
+          <h3>Backend</h3>
+        
+          <div class="skill-list">
+            <span>Java</span>
+            <span>Spring Boot</span>
+            <span>Spring Security</span>
+            <span>Spring Cloud</span>
+            <span>OpenFeign</span>
+            <span>REST APIs</span>
+            <span>Microservices</span>
+          </div>
+        
+        </div>
+      
+      
+        <!-- ARCHITECTURE & INFRASTRUCTURE -->
+        <div class="skill-category">
+        
+          <h3>Architecture & infrastructure</h3>
+        
+          <div class="skill-list">
+            <span>Keycloak</span>
+            <span>API Gateway</span>
+            <span>Config Server</span>
+            <span>Netflix Eureka</span>
+            <span>Apache Kafka</span>
+            <span>PostgreSQL</span>
+            <span>MongoDB</span>
+            <span>Docker</span>
+          </div>
+        
+        </div>
+      
+      
+        <!-- TOOLS -->
+        <div class="skill-category">
+        
+          <h3>Tools</h3>
+        
+          <div class="skill-list">
+            <span>Git</span>
+            <span>GitHub</span>
+            <span>Maven</span>
+            <span>Postman</span>
+          </div>
+        
+        </div>
+      
+      
+        <!-- AI & ML -->
+        <div class="skill-category">
+        
+          <h3>AI & machine learning</h3>
+        
+          <div class="skill-list">
+            <span>Python</span>
+            <span>TensorFlow</span>
+            <span>Keras</span>
+            <span>Scikit-learn</span>
+            <span>OpenCV</span>
+            <span>Jupyter</span>
+          </div>
+        
+        </div>
+      
+      </div>
+    
+    </section>
+
+    <!-- CERTIFICATIONS -->
+    <section id="certifications" class="section cert-section">
+    
+      <div class="section-heading">
+      
+        <p class="section-label">Certifications</p>
+      
+        <h2>
+          Certifications
+          <span>and continued learning.</span>
+        </h2>
+      
+      </div>
+    
+      <div class="cert-list">
+      
+        <!-- ANGULAR -->
+        <article class="cert-item cert-item--pink">
+        
+          <div class="cert-number">01</div>
+        
+          <div class="cert-main">
+          
+            <div class="cert-meta">
+              <span class="cert-issuer">Udemy</span>
+            
+              <span class="cert-tag">
+                Course
+              </span>
+            </div>
+          
+            <h3>Angular from Zero to Hero</h3>
+          
+            <a
+              href="https://www.udemy.com/certificate/UC-4db9553a-5ff8-4108-90a5-83a875d9b21f/"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="cert-link"
+            >
+              View certificate
+              <span>↗</span>
+            </a>
+          
+          </div>
+        
+          <div class="cert-badge">
+            <span>NG</span>
+          </div>
+        
+        </article>
+      
+      
+        <!-- DOCKER -->
+        <article class="cert-item cert-item--blue">
+        
+          <div class="cert-number">02</div>
+        
+          <div class="cert-main">
+          
+            <div class="cert-meta">
+              <span class="cert-issuer">KodeKloud</span>
+            
+              <span class="cert-tag">
+                Training
+              </span>
+            </div>
+          
+            <h3>Docker Training Course</h3>
+          
+            <a
+              href="https://drive.google.com/file/d/1Bm0sefqArtJh8Fd8rqbVOKmUsJSzqNO7/view?usp=sharing"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="cert-link"
+            >
+              View certificate
+              <span>↗</span>
+            </a>
+          
+          </div>
+        
+          <div class="cert-badge">
+            <span>DO</span>
+          </div>
+        
+        </article>
+      
+      
+        <!-- DEEP LEARNING -->
+        <article class="cert-item cert-item--purple cert-item--featured">
+        
+          <div class="cert-number">03</div>
+        
+          <div class="cert-main">
+          
+            <div class="cert-meta">
+              <span class="cert-issuer">
+                DeepLearning.AI · Coursera
+              </span>
+            
+              <span class="cert-tag">
+                Specialization
+              </span>
+            </div>
+          
+            <h3>Deep Learning Specialization</h3>
+          
+            <div class="cert-courses">
+            
+              <a
+                href="https://www.coursera.org/account/accomplishments/certificate/XGT8HTU8899E"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Neural Networks and Deep Learning
+                <span>↗</span>
+              </a>
+            
+              <a
+                href="https://www.coursera.org/account/accomplishments/certificate/N3JZMATGXHT0"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Improving Deep Neural Networks
+                <span>↗</span>
+              </a>
+            
+              <a
+                href="https://www.coursera.org/account/accomplishments/certificate/NC3SG2IW4VRV"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Structuring Machine Learning Projects
+                <span>↗</span>
+              </a>
+            
+              <a
+                href="https://www.coursera.org/account/accomplishments/certificate/36TIBJSR9O4U"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Convolutional Neural Networks
+                <span>↗</span>
+              </a>
+            
+            </div>
+          
+          </div>
+        
+          <div class="cert-badge">
+            <span>DL</span>
+          </div>
+        
+        </article>
+      
+      
+        <!-- TOEIC -->
+        <article class="cert-item cert-item--mint">
+        
+          <div class="cert-number">04</div>
+        
+          <div class="cert-main">
+          
+            <div class="cert-meta">
+              <span class="cert-issuer">
+                ETS Global
+              </span>
+            
+              <span class="cert-tag">
+                Language
+              </span>
+            </div>
+          
+            <h3>TOEIC Certificate</h3>
+          
+            <a
+              href="https://drive.google.com/file/d/1pKKlVadpBOe-tgBudiZcGDSKNsVx4S6U/view"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="cert-link"
+            >
+              View certificate
+              <span>↗</span>
+            </a>
+          
+          </div>
+        
+          <div class="cert-badge">
+            <span>EN</span>
+          </div>
+        
+        </article>
+      
+      </div>
+    
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" class="contact-section">
+    
+      <div class="contact-content">
+      
+        <p class="section-label">Contact</p>
+      
+        <h2>
+          Let's connect.
+          <span>I'd be happy to hear from you.</span>
+        </h2>
+      
+        <p class="contact-description">
+          I'm open to software engineering opportunities,
+          particularly full-stack roles involving Angular and
+          Spring Boot. If you think my background could be a
+          good fit, I'd be happy to connect.
+        </p>
+      
+        <div class="contact-actions">
+        
+          <a
+            href="mailto:essidnouha1000@gmail.com"
+            class="contact-link contact-link-primary"
+          >
+            <span class="contact-link-icon">✉</span>
+            <span class="contact-link-text">
+              <strong>Email me</strong>
+              <small>essidnouha1000@gmail.com</small>
+            </span>
+            <span class="contact-arrow">↗</span>
+          </a>
+        
+          <a
+            href="https://www.linkedin.com/in/nouhaessid/"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="contact-link"
+          >
+            <span class="contact-link-icon">in</span>
+            <span class="contact-link-text">
+              <strong>LinkedIn</strong>
+              <small>Let's connect professionally</small>
+            </span>
+            <span class="contact-arrow">↗</span>
+          </a>
+        
+          <a
+            href="https://github.com/nouhaessid"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="contact-link"
+          >
+            <span class="contact-link-icon">⌘</span>
+            <span class="contact-link-text">
+              <strong>GitHub</strong>
+              <small>Explore my projects</small>
+            </span>
+            <span class="contact-arrow">↗</span>
+          </a>
+        
+        </div>
+      
+      </div>
+    
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+  
+    <div class="footer-inner">
+    
+      <p>© {{ currentYear }} Nouha Essid</p>
+    
+      <p>
+        Built with <span>Angular</span> ✦
+      </p>
+    
+    </div>
+  
+  </footer>
+</div>
+
